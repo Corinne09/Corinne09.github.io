@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corinne — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:      #F5F0E8;
+      --lavender:   #E8E0F5;
+      --lavender-mid: #C9B8E8;
+      --sage:       #D4E6D0;
+      --sage-dark:  #2d5028;
+      --plum:       #7B5EA7;
+      --plum-dark:  #4a3b6e;
+      --plum-deeper:#3b2860;
+      --border:     rgba(123, 94, 167, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--plum-dark);
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      background-color: var(--lavender);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 48px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 36px;
+    }
+
+    nav a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--plum-dark);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--plum);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 48px 80px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 52px;
+      margin-bottom: 72px;
+    }
+
+    .hero-photo {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid var(--plum);
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .hero-photo-placeholder {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid var(--plum);
+      background-color: var(--lavender-mid);
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-name-block {
+      background-color: var(--lavender);
+      padding: 10px 18px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .hero-name-block h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: var(--plum-deeper);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-bio-block {
+      background-color: var(--lavender);
+      padding: 14px 18px;
+      border-radius: 6px;
+    }
+
+    .hero-bio-block p {
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--plum-dark);
+      line-height: 1.6;
+    }
+
+    /* TIMELINE SECTION */
+    .timeline-section {
+      background-color: var(--lavender);
+      border-radius: 10px;
+      padding: 32px 36px 36px;
+    }
+
+    .timeline-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--plum);
+      margin-bottom: 32px;
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 32px;
+    }
+
+    .timeline-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .timeline-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--plum);
+      background: white;
+    }
+
+    .timeline-info {
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    .timeline-info p {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--plum-dark);
+      line-height: 1.6;
+    }
+
+    .timeline-info .role {
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav {
+        padding: 14px 24px;
+        gap: 24px;
+      }
+
+      main {
+        padding: 36px 24px 60px;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+      }
+
+      .hero-photo,
+      .hero-photo-placeholder {
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-name-block h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">home</a>
+    <a href="resume.html">resume</a>
+    <a href="portfolio.html">portfolio</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/profile-photo.jpeg" alt="Corinne" class="hero-photo">
+      <div class="hero-text">
+        <div class="hero-name-block">
+          <h1>Hi! I'm Corinne</h1>
+        </div>
+        <div class="hero-bio-block">
+          <p>I'm a computer science student who is dedicated to ethical computing, human rights, and advocacy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section">
+      <h2>Timeline</h2>
+      <div class="timeline-grid">
+
+        <div class="timeline-item">
+          <img src="images/cal-logo.jpg" alt="UC Berkeley Seal" class="timeline-logo">
+          <div class="timeline-info">
+            <p class="role">Bachelor in Computer Science</p>
+            <p>U.C. Berkeley</p>
+            <p>2023 – 2027</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <img src="images/hrdag-logo.jpg" alt="HRDAG Logo" class="timeline-logo">
+          <div class="timeline-info">
+            <p class="role">Intern</p>
+            <p>Human Rights Data Analysis Group</p>
+            <p>Present</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
